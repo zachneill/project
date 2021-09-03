@@ -1,4 +1,5 @@
 from app import app, db
+from database.setup_database import *
 # from auth import *
 # from admin import admin
 # from api import api
@@ -7,12 +8,7 @@ from app import app, db
 # admin.setup()
 # api.setup()
 
-def create_tables():
-    # Create table for each model if it does not exist.
-    # Use the underlying peewee database object instead of the
-    # flask-peewee database wrapper:
-    db.database.create_tables([User], safe=True)
+setup = setup_db('x01.db')
 
 if __name__ == '__main__':
-    # create_tables()
     app.run(host="localhost", port=80)
