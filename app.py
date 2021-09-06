@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from peewee import *
 
-db = SqliteDatabase('x01.db')
+db = SqliteDatabase('database.db')
 app = Flask(__name__)
 
 @app.before_request
