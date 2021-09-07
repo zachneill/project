@@ -8,7 +8,7 @@ from database.setup_database import *
 # admin.setup()
 # api.setup()
 
-setup = setup_db('x01.db')
+setup_db('database.db')
 
 if __name__ == '__main__':
     app.run(host="localhost", port=81)
